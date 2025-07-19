@@ -221,6 +221,11 @@ nav {
     align-items: center;
     overflow: hidden;
 }
+.image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 /* Quick Links Section */
 .quick-links {
@@ -512,20 +517,36 @@ nav {
     transform: translateY(-10px);
 }
 
+/* Projects Section - Image Adjustments */
 .project-image {
     height: 200px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.2); /* Fallback background */
 }
 
 .project-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; /* Changed from cover to contain to show full image */
     transition: transform 0.5s ease;
+    background: transparent;
+    padding: 20px; /* Add some padding around SVG images */
 }
 
 .project-card:hover .project-image img {
-    transform: scale(1.1);
+    transform: scale(1.05); /* Slightly reduced scale for better effect */
+}
+
+/* SVG-specific adjustments */
+.project-image img[src$=".svg"] {
+    max-width: 80%; /* Reduce SVG size to fit better */
+    height: auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1); /* Light background for SVG visibility */
+    border-radius: 5px;
 }
 
 .project-info {
