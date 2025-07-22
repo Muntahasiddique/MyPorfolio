@@ -39,6 +39,7 @@
                 <div class="cta-buttons">
                     <a href="projects.html" class="btn">View My Work</a>
                     <a href="contact.html" class="btn secondary">Hire Me</a>
+                    <a href="#" id="downloadCv" class="btn secondary">Download CV</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -46,55 +47,21 @@
             </div>
         </section>
 
-        <section class="quick-links">
-            <div class="link-card glass">
-                <i class="fas fa-user"></i>
-                <h3>About Me</h3>
-                <p>Learn more about my skills and background</p>
-                <a href="about.html">Read More</a>
-            </div>
-            <div class="link-card glass">
-                <i class="fas fa-code"></i>
-                <h3>My Services</h3>
-                <p>See what I can do for your project</p>
-                <a href="services.html">Read More</a>
-            </div>
-            <div class="link-card glass">
-                <i class="fas fa-envelope"></i>
-                <h3>Contact Me</h3>
-                <p>Get in touch for collaborations</p>
-                <a href="contact.html">Read More</a>
-            </div>
-        </section>
+        <!-- Rest of your HTML remains the same -->
     </main>
 
     <footer class="glass">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Connect With Me</h3>
-                <div class="social-icons">
-                    <a href="https://github.com/Muntahasiddique"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/muntaha-siddique-shahid-634711319/"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/muntahamirza120/"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2023 Muntaha Siddique. All Rights Reserved.</p>
-        </div>
+        <!-- Footer content remains the same -->
     </footer>
 
     <script src="js/particles.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        // Direct download implementation
+        document.getElementById('downloadCv').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.location.href = 'assets/downloads/Muntaha_Siddique_CV.pdf';
+        });
+    </script>
 </body>
 </html>

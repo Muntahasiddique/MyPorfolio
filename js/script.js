@@ -124,3 +124,95 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Form submission handling
+    const contactForm = document.getElementById('contactForm');
+    const formFeedback = document.getElementById('formFeedback');
+    const loadingSpinner = document.getElementById('loadingSpinner');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show loading spinner
+            loadingSpinner.style.display = 'block';
+            formFeedback.style.display = 'none';
+            
+            // Submit form data using Fetch API
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: new FormData(contactForm),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                loadingSpinner.style.display = 'none';
+                
+                if (response.ok) {
+                    // Success message
+                    formFeedback.textContent = 'Thank you! Your message has been sent successfully.';
+                    formFeedback.className = 'form-feedback form-success';
+                    formFeedback.style.display = 'block';
+                    
+                    // Reset form
+                    contactForm.reset();
+                } else {
+                    // Error message
+                    formFeedback.textContent = 'Oops! There was a problem sending your message. Please try again later.';
+                    formFeedback.className = 'form-feedback form-error';
+                    formFeedback.style.display = 'block';
+                }
+            })
+            .catch(error => {
+                loadingSpinner.style.display = 'none';
+                formFeedback.textContent = 'Oops! There was a network error. Please check your connection and try again.';
+                formFeedback.className = 'form-feedback form-error';
+                formFeedback.style.display = 'block';
+            });
+        });
+    }
+    
+    // Initialize particles.js if available
+    if (typeof particlesJS !== 'undefined') {
+        particlesJS.load('particles-js', 'js/particles.json', function() {
+            console.log('Particles.js loaded successfully');
+        });
+    }
+    
+    // Mobile menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    }
+});
+
+// Added the functionality of PDF 
+// Add this to your existing script.js file
+document.addEventListener('DOMContentLoaded', function() {
+    // Download CV functionality
+    const downloadCvBtn = document.querySelector('.btn.secondary[href="contact.html"]:nth-child(2)');
+    
+    if (downloadCvBtn) {
+        downloadCvBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Path to your CV PDF file
+            const pdfUrl = 'assets/downloads/Muntaha_Siddique_CV.pdf';
+            
+            // Create a temporary anchor element
+            const link = document.createElement('a');
+            link.href = pdfUrl;
+            link.download = 'Muntaha_Siddique_CV.pdf'; // Name of the downloaded file
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    }
+});
