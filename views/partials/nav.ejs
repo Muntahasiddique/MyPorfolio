@@ -1,0 +1,25 @@
+<header class="glass">
+    <nav>
+        <div class="logo">Muntaha<span>Siddique</span></div>
+        <ul class="nav-links">
+            <li><a href="/" class="<%= currentPage === 'home' ? 'active' : '' %>">Home</a></li>
+            <li><a href="/about" class="<%= currentPage === 'about' ? 'active' : '' %>">About</a></li>
+            <li><a href="/services" class="<%= currentPage === 'services' ? 'active' : '' %>">Services</a></li>
+            <li><a href="/projects" class="<%= currentPage === 'projects' ? 'active' : '' %>">Projects</a></li>
+            <li><a href="/contact" class="<%= currentPage === 'contact' ? 'active' : '' %>">Contact</a></li>
+        </ul>
+        <div class="theme-toggle">
+  <input type="checkbox" id="theme-switch" class="toggle-checkbox">
+  <label for="theme-switch" class="toggle-label">
+    <i class="fas fa-moon"></i>
+    <i class="fas fa-sun"></i>
+    <span class="toggle-ball"></span>
+  </label>
+</div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+</header>

@@ -1,0 +1,86 @@
+
+<%- include('partials/header') %>
+<%- include('partials/nav') %>
+    <main>
+        <section class="contact-intro glass">
+            <h1>Get In <span>Touch</span></h1>
+            <p>Have a project in mind or want to discuss potential opportunities? Feel free to reach out!</p>
+        </section>
+
+        <section class="contact-container">
+            <div class="contact-info glass">
+                <h2>Contact Information</h2>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <p>Muntahamirza890@gmail.com</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h3>Phone</h3>
+                        <p>0308-6631342</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3>Address</h3>
+                        <p>X-Block Madina Town, Faisalabad</p>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <h3>Connect With Me</h3>
+                    <div class="social-icons">
+                        <a href="https://github.com/Muntahasiddique"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/muntaha-siddique-shahid-634711319/"><i class="fab fa-linkedin"></i></a>
+                      
+                        <a href="https://www.instagram.com/muntahamirza120/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form glass">
+                <h2>Send Me a Message</h2>
+                
+                <div id="formFeedback" class="form-feedback"></div>
+                <div id="loadingSpinner" class="loading-spinner"></div>
+                
+             <!-- modify this form HTML and place wherever you want your form -->
+<form id="contactForm"
+  action="https://formspree.io/f/myzpeekp"
+  method="POST"
+>
+  <label class="form-group" >
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label class="form-group" >
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+ <input type="hidden" name="_next" value="https://yourportfolio.com/thank-you">
+  <button class="btn" type="submit">Send</button>
+</form>
+
+
+
+            </div>
+        </section>
+
+        <section class="map-section glass">
+            <h2>Find Me on Map</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403.215484429329!2d73.12345678901234!3d31.45678901234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDI3JzI0LjQiTiA3M8KwMDcnMjkuOCJF!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s" 
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+    </main>
+
+
+
+   
+<%- include('partials/footer') %>
+
