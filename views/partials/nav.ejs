@@ -2,20 +2,40 @@
     <nav>
         <div class="logo">Muntaha<span>Siddique</span></div>
         <ul class="nav-links">
-            <li><a href="/" class="<%= currentPage === 'home' ? 'active' : '' %>">Home</a></li>
-            <li><a href="/about" class="<%= currentPage === 'about' ? 'active' : '' %>">About</a></li>
-            <li><a href="/services" class="<%= currentPage === 'services' ? 'active' : '' %>">Services</a></li>
-            <li><a href="/projects" class="<%= currentPage === 'projects' ? 'active' : '' %>">Projects</a></li>
-            <li><a href="/contact" class="<%= currentPage === 'contact' ? 'active' : '' %>">Contact</a></li>
+            <li>
+                <a href="/" class="<%= currentPage === 'home' ? 'active' : '' %>">
+                    <i class="fas fa-home nav-icon"></i> Home
+                </a>
+            </li>
+            <li>
+                <a href="/about" class="<%= currentPage === 'about' ? 'active' : '' %>">
+                    <i class="fas fa-user nav-icon"></i> About
+                </a>
+            </li>
+            <li>
+                <a href="/services" class="<%= currentPage === 'services' ? 'active' : '' %>">
+                    <i class="fas fa-code nav-icon"></i> Services
+                </a>
+            </li>
+            <li>
+                <a href="/projects" class="<%= currentPage === 'projects' ? 'active' : '' %>">
+                    <i class="fas fa-project-diagram nav-icon"></i> Projects
+                </a>
+            </li>
+            <li>
+                <a href="/contact" class="<%= currentPage === 'contact' ? 'active' : '' %>">
+                    <i class="fas fa-envelope nav-icon"></i> Contact
+                </a>
+            </li>
         </ul>
         <div class="theme-toggle">
-  <input type="checkbox" id="theme-switch" class="toggle-checkbox">
-  <label for="theme-switch" class="toggle-label">
-    <i class="fas fa-moon"></i>
-    <i class="fas fa-sun"></i>
-    <span class="toggle-ball"></span>
-  </label>
-</div>
+            <input type="checkbox" id="theme-switch" class="toggle-checkbox">
+            <label for="theme-switch" class="toggle-label">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <span class="toggle-ball"></span>
+            </label>
+        </div>
         <div class="hamburger">
             <div class="line"></div>
             <div class="line"></div>
