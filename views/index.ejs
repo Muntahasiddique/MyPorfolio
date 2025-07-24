@@ -1,44 +1,57 @@
 <%- include('partials/header') %>
 <%- include('partials/nav') %>
 
-    <main>
-        <section class="hero glass">
+  
+    <main class="animate__animated animate__fadeIn">
+        <section class="hero">
             <div class="hero-content">
-                <h1>Hi, I'm <span>Muntaha Siddique</span></h1>
-                <h2>Frontend Developer</h2>
-                <p>Building responsive and interactive web experiences with HTML, CSS, and JavaScript</p>
-                <div class="cta-buttons">
-                    <a href="/projects" class="btn">View My Work</a>
-                    <a href="contact.html" class="btn secondary">Download CV</a>
-                     <a href="/contact" class="btn secondary">Hire Me </a>
+                <h1 class="animate__animated animate__fadeInDown">Hi, I'm <span class="gradient-text">Muntaha Siddique</span></h1>
+                <h2 class="animate__animated animate__fadeInDown animate__delay-1s">Frontend Developer</h2>
+                <p class="animate__animated animate__fadeIn animate__delay-1s">Crafting immersive digital experiences with modern web technologies</p>
+                <div class="cta-buttons animate__animated animate__fadeInUp animate__delay-2s">
+                    <a href="/projects" class="btn btn-primary pulse">View My Work</a>
+                    <a href="/contact" class="btn btn-secondary">Hire Me</a>
+                    <a href="/assets/downloads/Muntaha_Siddique_CV.pdf" download class="btn btn-tertiary">Download CV</a>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="image-placeholder"><img src="assets/images/muntaha-profile.jpg" alt=""></div>
+            <div class="hero-image animate__animated animate__fadeInRight animate__delay-1s">
+                <div class="image-wrapper">
+                    <img src="assets/images/muntaha-profile.jpg" alt="Muntaha Siddique">
+                    <div class="shape-overlay"></div>
+                </div>
             </div>
         </section>
 
         <section class="quick-links">
-            <div class="link-card glass">
-                <i class="fas fa-user"></i>
+            <div class="link-card animate__animated animate__fadeInUp" data-delay="0.1s">
+                <div class="icon-circle">
+                    <i class="fas fa-user"></i>
+                </div>
                 <h3>About Me</h3>
-                <p>Learn more about my skills and background</p>
-                <a href="/about">Read More</a>
+                <p>Discover my journey, skills, and professional background</p>
+                <a href="/about" class="link-arrow">Explore <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="link-card glass">
-                <i class="fas fa-code"></i>
+            <div class="link-card animate__animated animate__fadeInUp" data-delay="0.2s">
+                <div class="icon-circle">
+                    <i class="fas fa-code"></i>
+                </div>
                 <h3>My Services</h3>
-                <p>See what I can do for your project</p>
-                <a href="/services">Read More</a>
+                <p>See how I can help bring your digital vision to life</p>
+                <a href="/services" class="link-arrow">Discover <i class="fas fa-arrow-right"></i></a>
             </div>
-            <div class="link-card glass">
-                <i class="fas fa-envelope"></i>
+            <div class="link-card animate__animated animate__fadeInUp" data-delay="0.3s">
+                <div class="icon-circle">
+                    <i class="fas fa-envelope"></i>
+                </div>
                 <h3>Contact Me</h3>
-                <p>Get in touch for collaborations</p>
-                <a href="/contact">Read More</a>
+                <p>Let's collaborate on your next project</p>
+                <a href="/contact" class="link-arrow">Connect <i class="fas fa-arrow-right"></i></a>
             </div>
         </section>
     </main>
 
    
 <%- include('partials/footer') %>
+
+
+
